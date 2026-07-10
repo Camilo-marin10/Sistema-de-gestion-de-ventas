@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1100" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#fafafa"/>
+      <stop offset="100%" stop-color="#f1f1f2"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dc2626" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#dc2626" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="vignette" cx="50%" cy="38%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#e4e4e7" stop-opacity="0.5"/>
+    </radialGradient>
+    <pattern id="grid" width="46" height="46" patternUnits="userSpaceOnUse">
+      <path d="M46 0H0V46" fill="none" stroke="#e4e4e7" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="900" height="1100" fill="url(#bg)"/>
+  <rect width="900" height="1100" fill="url(#grid)" opacity="0.8"/>
+  <polygon points="0,1100 520,1100 900,260 900,0 260,0" fill="url(#beam)"/>
+
+  <circle cx="450" cy="470" r="300" stroke="#e4e4e7" stroke-width="1"/>
+  <circle cx="450" cy="470" r="230" stroke="#e4e4e7" stroke-width="1"/>
+  <circle cx="450" cy="470" r="160" stroke="#dc2626" stroke-opacity="0.4" stroke-width="1" stroke-dasharray="4 8"/>
+
+  <!-- corner brackets -->
+  <g stroke="#dc2626" stroke-width="2.5">
+    <path d="M48 110V60H98"/>
+    <path d="M852 110V60H802"/>
+    <path d="M48 990V1040H98"/>
+    <path d="M852 990V1040H802"/>
+  </g>
+
+  <!-- minimalist hoodie glyph -->
+  <g transform="translate(450 500)" stroke="#16171a" stroke-width="3" stroke-linejoin="round" stroke-linecap="round" fill="none">
+    <path d="M-150 260 L-150 40 C-150 -70 -90 -150 0 -150 C90 -150 150 -70 150 40 L150 260" />
+    <path d="M-150 40 L-230 100 L-190 150 L-150 110" />
+    <path d="M150 40 L230 100 L190 150 L150 110" />
+    <path d="M-60 -140 C-60 -190 60 -190 60 -140" />
+    <path d="M-38 -40 C-38 10 38 10 38 -40" stroke-opacity="0.55"/>
+    <line x1="-14" y1="-30" x2="-24" y2="60" stroke-opacity="0.55"/>
+    <line x1="14" y1="-30" x2="24" y2="60" stroke-opacity="0.55"/>
+    <rect x="-70" y="120" width="140" height="70" rx="6" stroke-opacity="0.55"/>
+    <line x1="-150" y1="10" x2="150" y2="10" stroke="#dc2626" stroke-width="10" transform="rotate(-18)"/>
+  </g>
+
+  <!-- mono readout labels -->
+  <g fill="#6b7280" font-family="monospace" font-size="15" letter-spacing="2">
+    <text x="70" y="150">UNIT_04 // READY</text>
+    <text x="70" y="950">STOCK: LIVE</text>
+    <text x="620" y="950">DROP_01 / ACTIVE</text>
+  </g>
+  <circle cx="55" cy="145" r="5" fill="#dc2626"/>
+
+  <rect width="900" height="1100" fill="url(#vignette)"/>
+</svg>
