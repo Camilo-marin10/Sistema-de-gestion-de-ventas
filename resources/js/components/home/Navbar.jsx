@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { useLocation } from "react-router-dom";
 import Logo from "./Logo";
 
 const LINKS = [
@@ -10,6 +11,8 @@ const LINKS = [
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const ticking = useRef(false);
+    const location = useLocation();
+    const isHome = location.pathname === "/";
 
     useEffect(() => {
         function onScroll() {
@@ -24,9 +27,11 @@ export default function Navbar() {
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
 
-    const textClass = scrolled ? "text-ink" : "text-white";
-    const linkClass = scrolled ? "text-muted" : "text-white/80";
-    const borderClass = scrolled ? "border-border" : "border-white/20";
+    // Typography: black outside home, white on home (unless scrolled)
+    const textClass = !isHome || scrolled ? "text-ink" : "text-white";
+    const linkClass = !isHome || scrolled ? "text-muted" : "text-white/80";
+    const borderClass =
+        !isHome || scrolled ? "border-border" : "border-white/20";
 
     return (
         <header

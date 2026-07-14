@@ -94,3 +94,29 @@
         color: var(--color-ink);
     }
 }
+
+/* Custom select styling to match dark theme */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+}
+select:focus {
+    border-color: var(--color-accent);
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.5),
+        0 0 0 6px rgba(220, 38, 38, 0.06);
+    outline: none;
+}
+select option {
+    background-color: #0a0a0a;
+    color: #fff;
+}
+
+/* Make native dropdown on some platforms slightly elevated */
+select::-ms-expand {
+    display: none;
+}
