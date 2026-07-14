@@ -29,6 +29,8 @@
     --animate-fade-up: fade-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
     --animate-blink: blink-dot 1.8s ease-in-out infinite;
     --animate-scan: scan 6s linear infinite;
+    --animate-float-slow: float-slow 7s ease-in-out infinite;
+    --animate-pulse-glow: pulse-glow 3.2s ease-in-out infinite;
 
     @keyframes marquee {
         from {
@@ -64,6 +66,24 @@
         }
         100% {
             transform: translateY(100%);
+        }
+    }
+    @keyframes float-slow {
+        0%,
+        100% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+    @keyframes pulse-glow {
+        0%,
+        100% {
+            box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.2);
+        }
+        50% {
+            box-shadow: 0 0 0 8px rgba(220, 38, 38, 0);
         }
     }
 }
