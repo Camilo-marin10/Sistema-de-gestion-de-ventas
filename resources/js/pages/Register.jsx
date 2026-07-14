@@ -113,7 +113,7 @@ export default function Register() {
                                                 name="tipoDocumento"
                                                 value={form.tipoDocumento}
                                                 onChange={handleChange}
-                                                className={`${inputClass} appearance-none pr-10`}
+                                                className={`${inputClass} appearance-none pr-12 text-ink`}
                                             >
                                                 <option value="" disabled>
                                                     Selecciona
@@ -129,7 +129,7 @@ export default function Register() {
                                                 </option>
                                             </select>
                                             <svg
-                                                className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/70"
+                                                className="pointer-events-none absolute right-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
                                                 viewBox="0 0 20 20"
                                                 fill="none"
                                                 xmlns="http://www.w3.org/2000/svg"
@@ -227,7 +227,7 @@ export default function Register() {
                                     </button>
                                     <Link
                                         to="/login"
-                                        className="text-sm uppercase tracking-[0.25em] text-white/75 transition hover:text-white"
+                                        className="text-sm uppercase tracking-[0.25em] text-ink transition hover:text-accent"
                                     >
                                         Ya tengo cuenta
                                     </Link>

@@ -77,19 +77,13 @@ export default function Login() {
                                     />
                                 </div>
 
-                                <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+                                <div className="flex justify-center">
                                     <button
                                         type="submit"
-                                        className="inline-flex w-full sm:w-auto items-center justify-center rounded-full bg-ink px-8 py-3 text-sm font-semibold uppercase text-white"
+                                        className="inline-flex w-full max-w-xs items-center justify-center rounded-full bg-ink px-8 py-3 text-sm font-semibold uppercase text-white"
                                     >
                                         Iniciar sesión
                                     </button>
-                                    <Link
-                                        to="/register"
-                                        className="text-sm uppercase tracking-[0.25em] text-accent transition hover:text-accent-dark"
-                                    >
-                                        Crear cuenta
-                                    </Link>
                                 </div>
 
                                 <div className="text-center mt-2">
