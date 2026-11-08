@@ -30,7 +30,25 @@ class UserFactory extends Factory
             'email_verified_at' => now(),
             'password' => static::$password ??= Hash::make('password'),
             'remember_token' => Str::random(10),
+            'phone' => '+57 3'.fake()->numerify('## ### ####'),
+            'role' => User::ROLE_CLIENTE,
+            'is_active' => true,
         ];
+    }
+
+    public function admin(): static
+    {
+        return $this->state(fn () => ['role' => User::ROLE_ADMIN]);
+    }
+
+    public function vendedor(): static
+    {
+        return $this->state(fn () => ['role' => User::ROLE_VENDEDOR]);
+    }
+
+    public function inactive(): static
+    {
+        return $this->state(fn () => ['is_active' => false]);
     }
 
     /**
